@@ -2,8 +2,6 @@ from rest_framework import serializers
 
 from users.models import Users
 
-from django.utils import timezone
-
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
