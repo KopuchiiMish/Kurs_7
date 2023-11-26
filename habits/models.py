@@ -1,7 +1,6 @@
 from django.db import models
 from config import settings
-import django as django
-import datetime
+from django.utils import timezone
 
 
 # Модель для представления привычки
@@ -27,7 +26,7 @@ class Habit(models.Model):
     place = models.CharField(max_length=100, null=False, blank=False, verbose_name="Место для привычки")
 
     # Поле для указания времени начала выполнения привычки
-    time = models.TimeField(default=datetime.datetime.now().time, verbose_name="Время начала привычки")
+    time = models.TimeField(default=timezone.now, verbose_name="Время начала привычки")
 
     # Поле для описания действия, связанного с привычкой
     action = models.CharField(max_length=100, null=False, blank=False, verbose_name="Действие привычки")
