@@ -13,7 +13,6 @@ from datetime import timedelta
 from pathlib import Path
 from dotenv import load_dotenv
 import os
-from django.utils import timezone
 
 load_dotenv()
 env_path = Path('.') / '.env'
