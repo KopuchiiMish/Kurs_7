@@ -1,10 +1,8 @@
 from users.views import UsersListView, UsersDetailView, UsersUpdateView, UsersDeleteView, UsersRegistrationView
 from django.urls import path
-from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView,)
-
+from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView, )
 
 app_name = "users"
-
 
 urlpatterns = [
     path("show/", UsersListView.as_view()),
